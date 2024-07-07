@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manga Titles</title>
+</head>
+<body>
+    <h1>Manga Titles</h1>
+    <ul>
+        {% for manga in manga_list %}
+            <li>{{ manga[1] }} by {{ manga[2] }} - {{ manga[3] }} pages, ${{ manga[4] }}</li>
+        {% endfor %}
+    </ul>
+    <a href="/">Back to Home</a>
+</body>
+</html>

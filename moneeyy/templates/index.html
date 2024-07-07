@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manga Management System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <h1>Manga Management System</h1>
+    <form action="/store" method="post">
+        <label for="manganame">Manga Name:</label>
+        <input type="text" id="manganame" name="manganame" required><br>
+        <label for="artist">Artist:</label>
+        <input type="text" id="artist" name="artist" required><br>
+        <label for="pages">Pages:</label>
+        <input type="number" id="pages" name="pages" required><br>
+        <label for="price">Price:</label>
+        <input type="number" step="0.01" id="price" name="price" required><br>
+        <input type="submit" value="Store Manga">
+    </form>
+    <br>
+    <a href="/info">Show Manga Information</a>
+    <br>
+    <a href="/count">Number of Manga in Database</a>
+</body>
+</html>
